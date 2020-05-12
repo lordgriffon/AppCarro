@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">AppCarro</string>
+    <string name="login">Login</string>
+    <string name="senha">Senha</string>
+    <string name="rodney_lataria">Rodney Lataria</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="email">Email</string>
+    <string name="confirmar_senha">Confirmar Senha</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="entrar">Entrar</string>
+    <string name="cadastrar">Cadastrar</string>
+</resources>
