@@ -9,16 +9,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Registro_Activity" android:theme="@style/TemaSemBarra"></activity>
-        <activity android:name=".Login_Activity" android:theme="@style/TemaSemBarra"/>
-        <activity android:name=".Splash_Activity" android:theme="@style/TemaSemBarra">
+        <activity android:name=".ListarCarrosActivity"></activity>
+        <activity
+            android:name=".CadastraVeiculoActivity"
+            android:theme="@style/TemaSemBarra" />
+        <activity
+            android:name=".Veiculos_Activity"
+            android:theme="@style/TemaSemBarra" />
+        <activity
+            android:name=".Registro_Activity"
+            android:theme="@style/TemaSemBarra" />
+        <activity
+            android:name=".Login_Activity"
+            android:theme="@style/TemaSemBarra" />
+        <activity
+            android:name=".Splash_Activity"
+            android:theme="@style/TemaSemBarra">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

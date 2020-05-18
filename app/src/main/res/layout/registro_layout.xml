@@ -29,8 +29,10 @@
             android:textSize="28sp" />
 
         <EditText
+            android:id="@+id/rLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/edittext"
             android:drawableRight="@drawable/ic_person"
             android:inputType="textWebEmailAddress" />
 
@@ -42,21 +44,26 @@
             android:textSize="28sp" />
 
         <EditText
+            android:id="@+id/rEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/edittext"
             android:drawableRight="@drawable/ic_email"
             android:inputType="textWebEmailAddress" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             android:layout_gravity="center"
             android:text="@string/senha"
             android:textSize="28sp" />
 
         <EditText
+            android:id="@+id/rSenha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/edittext"
             android:drawableRight="@drawable/ic_lock"
             android:inputType="textWebEmailAddress" />
 
@@ -68,15 +75,29 @@
             android:textSize="28sp" />
 
         <EditText
+            android:id="@+id/rCSenha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/edittext"
             android:drawableRight="@drawable/ic_lock"
             android:inputType="textWebEmailAddress" />
 
         <Button
+            android:id="@+id/btnRegristro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/botoes"
             android:text="@string/cadastrar" />
+
+        <Button
+            android:id="@+id/btnVoltarLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:onClick="voltarLogin"
+            android:background="@drawable/botoes"
+            android:text="@string/voltar" />
 
 
     </LinearLayout>

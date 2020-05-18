@@ -3,10 +3,19 @@
     <string name="login">Login</string>
     <string name="senha">Senha</string>
     <string name="rodney_lataria">Rodney Lataria</string>
-    <string name="cadastrar">Cadastrar</string>
     <string name="email">Email</string>
     <string name="confirmar_senha">Confirmar Senha</string>
-    <string name="cadastrar">Cadastrar</string>
     <string name="entrar">Entrar</string>
-    <string name="cadastrar">Cadastrar</string>
+    <string name="cadastrar_veiculo">Cadastrar veiculo</string>
+    <string name="sair">Sair</string>
+    <string name="cadastrar">cadastrar</string>
+    <string name="voltar">Voltar</string>
+    <string name="alterar">Alterar</string>
+    <string name="nome_do_veiculo">Nome do Veiculo</string>
+    <string name="placa_do_veiculo">Placa do Veiculo</string>
+    <string name="ano_do_carro">Ano do Carro</string>
+    <string name="valor_do_carro">Valor do Carro</string>
+    <string name="data_da_compra">Data da Compra</string>
+    <string name="descri_ao_do_carro">Descriçao do Carro</string>
+    <string name="buscarveiculo">BuscarVeiculo</string>
 </resources>
