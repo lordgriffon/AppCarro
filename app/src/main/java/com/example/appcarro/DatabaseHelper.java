@@ -21,7 +21,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table tbUsuario(login text primary key,email text, senha text)");
-        db.execSQL("create table tbCarros(nome text primary key,placa text,ano text,valor text,compra text,descricao text)");
+        db.execSQL("create table tbCarros(id integer primary key autoincrement,nome text,placa text,ano text,valor text,compra text,descricao text)");
     }
 
     @Override
@@ -46,7 +46,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-    public boolean insertCarro(String nome,String placa,String ano,String valor,String compra,String descricao) {
+    public boolean insertCarro(String nome, String placa, String ano, String valor, String compra, String descricao) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues contentValues = new ContentValues();
@@ -99,26 +99,63 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-    public void preencherLista(List<Carros> lista){
+    public void preencherLista(List<Carros> lista) {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * from tbCarros",null);
-        if (cursor.moveToFirst()){
-            do{
+        Cursor cursor = db.rawQuery("SELECT * from tbCarros", null);
+        if (cursor.moveToFirst()) {
+            do {
                 Carros carros = new Carros();
-                carros.setNome(cursor.getString(0));
-                carros.setPlaca(cursor.getString(1));
-                carros.setAno(cursor.getString(2));
-                carros.setValor(cursor.getString(3));
-                carros.setData(cursor.getString(4));
-                carros.setDescricao(cursor.getString(5));
+                carros.setNome(cursor.getString(1));
+                carros.setPlaca(cursor.getString(2));
+                carros.setAno(cursor.getString(3));
+                carros.setValor(cursor.getString(4));
+                carros.setData(cursor.getString(5));
+                carros.setDescricao(cursor.getString(6));
 
-                Object carrosList;
                 lista.add(carros);
 
-            }while(cursor.moveToNext());
+            } while (cursor.moveToNext());
 
 
         }
+
+
+    }
+
+
+    public void deletaCarro(List<Carros> lista) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String sql = "DELETE FROM tbCarros WHERE id = ?";
+        Carros carros = new Carros();
+        db.execSQL(sql, new Integer[]{carros.getId()});
+
+    }
+
+
+
+
+    public void recarregarCarros(List<Carros> lista) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        lista.clear();
+        Cursor cursor = db.rawQuery("SELECT * from tbCarros", null);
+        if (cursor.moveToFirst()) {
+            do {
+                Carros carros = new Carros();
+                carros.setNome(cursor.getString(1));
+                carros.setPlaca(cursor.getString(2));
+                carros.setAno(cursor.getString(3));
+                carros.setValor(cursor.getString(4));
+                carros.setData(cursor.getString(5));
+                carros.setDescricao(cursor.getString(6));
+
+                lista.add(carros);
+
+            } while (cursor.moveToNext());
+            cursor.close();
+
+
+        }
+
 
     }
 

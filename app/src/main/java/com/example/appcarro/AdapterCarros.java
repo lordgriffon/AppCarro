@@ -2,12 +2,15 @@ package com.example.appcarro;
 
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class AdapterCarros extends RecyclerView.Adapter<AdapterCarros.ViewHolder> {
+
+    Button btnExcluir;
     @NonNull
     @Override
     public AdapterCarros.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

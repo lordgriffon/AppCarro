@@ -1,7 +1,7 @@
 package com.example.appcarro;
 
 public class Carros {
-
+    private  int id;
     private String nome;
     private String placa;
     private String ano;
@@ -72,4 +72,11 @@ public class Carros {
     }
 
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }

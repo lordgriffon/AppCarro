@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
 import java.util.ArrayList;
@@ -27,6 +28,7 @@ public class ListarCarrosActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.listar_carros_layout);
 
+
         recyclerView = findViewById(R.id.idRecyclerView);
         db.preencherLista(listarCarros);
 
@@ -40,7 +42,11 @@ public class ListarCarrosActivity extends AppCompatActivity {
 
         recyclerView.addItemDecoration(new DividerItemDecoration(getApplicationContext(), LinearLayout.VERTICAL));
         recyclerView.setAdapter(adapter);
+
+
     }
+
+
 
 
 
